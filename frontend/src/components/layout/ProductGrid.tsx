@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface Product {
   id: string;
@@ -17,11 +18,14 @@ export function ProductGrid({ products }: ProductGridProps) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[36px] gap-y-[48px] w-full max-w-[960px] mx-auto px-5">
       {products.map((product) => (
         <div key={product.id} className="flex flex-col">
-          <a href={product.link} className="block mb-4">
-            <img
+          <a href={product.link} className="block mb-4 w-full bg-gray-50">
+            <Image
               src={product.image}
               alt={product.title}
-              className="w-full h-auto object-cover aspect-square bg-gray-100"
+              width={500}
+              height={500}
+              className="w-full h-auto object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </a>
           <div className="font-libre-franklin text-black">

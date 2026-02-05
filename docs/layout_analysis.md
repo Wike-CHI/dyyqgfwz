@@ -222,11 +222,11 @@ graph TD
   <!-- 商品卡片 1 -->
   <div class="product-card">
     <a href="#" class="product-image-link">
-      <img src="product.jpg" alt="Product Name">
+      <img src="/img/feiyunxiaomai.jpeg" alt="Product Name">
     </a>
     <div class="product-info">
-      <p class="product-title">I Drink Julius Hoodie</p>
-      <p class="product-price">US$64.00</p>
+      <p class="product-title">飞云江小麦</p>
+      <p class="product-price">¥14/500ML</p>
     </div>
   </div>
   <!-- 更多卡片... -->

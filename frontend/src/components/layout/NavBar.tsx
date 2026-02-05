@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavBarProps {
   transparent?: boolean;
@@ -30,8 +31,14 @@ export function NavBar({ transparent = false }: NavBarProps) {
       )}
     >
       {/* Logo */}
-      <Link href="/" className="font-poppins font-bold text-3xl tracking-wider">
-        <span className="text-[32px] md:text-[40px]">大友元气</span>
+      <Link href="/" className="flex items-center">
+        <Image
+          src="/logo/logo.png"
+          alt="大友元气"
+          width={120}
+          height={120}
+          className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] object-contain bg-white rounded-full p-1 shadow-lg"
+        />
       </Link>
 
       {/* Links */}

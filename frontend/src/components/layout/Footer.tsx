@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { siWechat, siTiktok, siX } from 'simple-icons';
+import { SocialIcon } from '@/components/ui/SocialIcon';
 
 export function Footer() {
   return (
@@ -29,11 +31,7 @@ export function Footer() {
         <div className="flex flex-col space-y-6">
           <h4 className="font-poppins font-bold text-sm tracking-widest uppercase text-gray-500">店铺位置</h4>
           <ul className="flex flex-col space-y-3 font-poppins text-sm text-gray-300 font-medium">
-            <li>马萨诸塞州 Charlton</li>
-            <li>马萨诸塞州 Tewksbury</li>
-            <li>马萨诸塞州 Sandwich</li>
-            <li>马萨诸塞州 Deerfield</li>
-            <li>康涅狄格州 Woodstock</li>
+            <li>浙江省瑞安市</li>
           </ul>
         </div>
 
@@ -41,16 +39,30 @@ export function Footer() {
         <div className="flex flex-col space-y-6">
           <h4 className="font-poppins font-bold text-sm tracking-widest uppercase text-gray-500">联系我们</h4>
           <div className="flex space-x-4">
-            {/* Social Icons Placeholders */}
-            <div className="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-white hover:text-primary-dark transition-all cursor-pointer">
-              <span className="text-xs font-bold">IG</span>
-            </div>
-            <div className="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-white hover:text-primary-dark transition-all cursor-pointer">
-              <span className="text-xs font-bold">FB</span>
-            </div>
-            <div className="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-white hover:text-primary-dark transition-all cursor-pointer">
-              <span className="text-xs font-bold">X</span>
-            </div>
+            <SocialIcon 
+              icon={siWechat} 
+              href="#" 
+              label="WeChat"
+              color="currentColor" 
+              size={20}
+              className="w-10 h-10 border border-gray-600 rounded-full hover:bg-white hover:text-primary-dark transition-all" 
+            />
+            <SocialIcon 
+              icon={siTiktok} 
+              href="#" 
+              label="TikTok" 
+              color="currentColor"
+              size={20}
+              className="w-10 h-10 border border-gray-600 rounded-full hover:bg-white hover:text-primary-dark transition-all" 
+            />
+            <SocialIcon 
+              icon={siX} 
+              href="#" 
+              label="X" 
+              color="currentColor"
+              size={18}
+              className="w-10 h-10 border border-gray-600 rounded-full hover:bg-white hover:text-primary-dark transition-all" 
+            />
           </div>
         </div>
       </div>
