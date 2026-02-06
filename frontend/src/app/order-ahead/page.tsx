@@ -1,11 +1,7 @@
 import { LocationTable } from "@/components/layout/LocationTable";
 
 const locations = [
-  { orderType: "外带购买", location: "Charlton", link: "#" },
-  { orderType: "外带购买", location: "Tewksbury", link: "#" },
-  { orderType: "外带购买", location: "Sandwich", link: "#" },
-  { orderType: "外带购买", location: "Deerfield", link: "#" },
-  { orderType: "现打生啤", location: "Charlton", link: "#" },
+  { orderType: "外带购买", location: "浙江省瑞安市铂瑞湾", link: "#" },
 ];
 
 export default function OrderAheadPage() {

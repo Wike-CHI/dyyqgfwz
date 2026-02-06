@@ -3,8 +3,8 @@ import { ZigZagSection } from "@/components/layout/ZigZagSection";
 const rows = [
   {
     image: "/img/gallery-02.png",
-    title: "访问博瑞湾",
-    text: "我们的博瑞湾店是大友元气酿造公司的核心。坐落城市中，它提供了一个宁静的环境来享受我们种类繁多的啤酒。我们欢迎您探索这片场地，找到属于您的完美角落。"
+    title: "访问铂金瑞湾",
+    text: "我们的铂瑞湾店是大友元气酿造公司的核心。坐落城市中，它提供了一个宁静的环境来享受我们种类繁多的啤酒。我们欢迎您探索这片场地，找到属于您的完美角落。"
   },
   {
     image: "/img/gallery-03.png",

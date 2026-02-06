@@ -71,8 +71,8 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto px-8 mt-24 pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center font-poppins text-xs text-gray-500">
         <p>© {new Date().getFullYear()} 大友元气酿造公司。保留所有权利。</p>
         <div className="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" className="hover:text-gray-300">隐私政策</a>
-          <a href="#" className="hover:text-gray-300">服务条款</a>
+          <Link href="/privacy-policy" className="hover:text-gray-300">隐私政策</Link>
+          <Link href="/terms-of-service" className="hover:text-gray-300">服务条款</Link>
         </div>
       </div>
     </footer>

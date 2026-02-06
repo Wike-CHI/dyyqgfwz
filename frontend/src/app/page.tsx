@@ -2,6 +2,7 @@ import { NavBar } from "@/components/layout/NavBar";
 import { HeroSection } from "@/components/layout/HeroSection";
 import { ContentGrid } from "@/components/layout/ContentGrid";
 import { Footer } from "@/components/layout/Footer";
+import Link from 'next/link';
 
 const whatsNewItems = [
   { id: '1', image: '/img/fresh-hops-craft-beer.png', title: '新品发布', meta: '本周' },
@@ -26,13 +27,14 @@ export default function Home() {
         <h1 className="font-poppins font-bold text-[48px] md:text-[62px] text-center drop-shadow-lg leading-tight tracking-tight">
           体验<br />大友元气
         </h1>
+        {/*调转到预约界面 */}
         <div className="mt-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-          <button className="px-10 py-4 bg-white text-primary-dark font-poppins font-bold text-sm tracking-widest uppercase rounded hover:bg-gray-100 transition-colors shadow-lg">
+          <Link href="/order-ahead" className="px-10 py-4 bg-white text-primary-dark font-poppins font-bold text-sm tracking-widest uppercase rounded hover:bg-gray-100 transition-colors shadow-lg text-center">
             提前点单
-          </button>
-          <button className="px-10 py-4 border-2 border-white text-white font-poppins font-bold text-sm tracking-widest uppercase rounded hover:bg-white hover:text-primary-dark transition-colors">
+          </Link>
+          <Link href="/visiting" className="px-10 py-4 border-2 border-white text-white font-poppins font-bold text-sm tracking-widest uppercase rounded hover:bg-white hover:text-primary-dark transition-colors text-center">
             参观我们
-          </button>
+          </Link>
         </div>
       </HeroSection>
 

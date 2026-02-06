@@ -28,9 +28,7 @@ export function LocationTable({ locations }: LocationTableProps) {
           {locations.map((loc, index) => (
             <tr key={index}>
               <td className="p-4 border-b border-gray-100 font-poppins font-light">
-                <a href={loc.link} className="hover:underline text-inherit">
-                  {loc.orderType}
-                </a>
+                {loc.orderType}
               </td>
               <td className="p-4 border-b border-gray-100 font-poppins">
                 {loc.location}
