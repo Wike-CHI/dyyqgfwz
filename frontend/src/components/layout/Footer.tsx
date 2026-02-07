@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { siWechat, siTiktok, siX } from 'simple-icons';
 import { SocialIcon } from '@/components/ui/SocialIcon';
 
 export function Footer() {
@@ -40,27 +39,33 @@ export function Footer() {
           <h4 className="font-poppins font-bold text-sm tracking-widest uppercase text-gray-500">联系我们</h4>
           <div className="flex space-x-4">
             <SocialIcon 
-              icon={siWechat} 
+              icon={null} 
               href="#" 
               label="WeChat"
               color="currentColor" 
               size={20}
+              useLocalImage={true}
+              imageSrc="/social media/WeChat.png"
               className="w-10 h-10 border border-gray-600 rounded-full hover:bg-white hover:text-primary-dark transition-all" 
             />
             <SocialIcon 
-              icon={siTiktok} 
+              icon={null} 
               href="#" 
               label="TikTok" 
               color="currentColor"
               size={20}
+              useLocalImage={true}
+              imageSrc="/social media/douyin.png"
               className="w-10 h-10 border border-gray-600 rounded-full hover:bg-white hover:text-primary-dark transition-all" 
             />
             <SocialIcon 
-              icon={siX} 
+              icon={null} 
               href="#" 
               label="X" 
               color="currentColor"
               size={18}
+              useLocalImage={true}
+              imageSrc="/social media/x.svg"
               className="w-10 h-10 border border-gray-600 rounded-full hover:bg-white hover:text-primary-dark transition-all" 
             />
           </div>

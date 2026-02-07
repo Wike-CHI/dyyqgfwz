@@ -1,9 +1,9 @@
 import React from 'react';
-import { SimpleIcon } from 'simple-icons';
+import Image from 'next/image';
 
 interface SocialIconProps {
-  /** The icon object from simple-icons */
-  icon: SimpleIcon;
+  /** The icon object from simple-icons or local image path */
+  icon: any;
   /** The URL to link to */
   href: string;
   /** Size of the icon in pixels (default: 24) */
@@ -14,6 +14,10 @@ interface SocialIconProps {
   label?: string;
   /** Additional CSS classes */
   className?: string;
+  /** Whether to use local image instead of simple-icon */
+  useLocalImage?: boolean;
+  /** Local image source path */
+  imageSrc?: string;
 }
 
 export const SocialIcon: React.FC<SocialIconProps> = ({
@@ -23,7 +27,30 @@ export const SocialIcon: React.FC<SocialIconProps> = ({
   color,
   label,
   className = '',
+  useLocalImage = false,
+  imageSrc,
 }) => {
+  // If using local image
+  if (useLocalImage && imageSrc) {
+    return (
+      <a 
+        href={href} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label={label}
+        className={`inline-flex items-center justify-center transition-transform hover:scale-110 ${className}`}
+      >
+        <Image
+          src={imageSrc}
+          alt={label || 'Social icon'}
+          width={typeof size === 'number' ? size : 24}
+          height={typeof size === 'number' ? size : 24}
+          className="object-contain"
+        />
+      </a>
+    );
+  }
+
   // If color is not provided, use the brand color from simple-icons
   // simple-icons provides hex without hash, so we add it
   const iconColor = color || `#${icon.hex}`;
