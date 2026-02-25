@@ -2,17 +2,17 @@ import { MultiColumnText } from "@/components/layout/MultiColumnText";
 
 const benefits = [
   {
-    image: "/img/gallery-05.png",
+    image: "/img/gallery-05.png.webp",
     title: "全面医疗保障",
     text: "我们提供顶级的医疗、牙科和眼科保险，确保您和您的家人得到周全的照顾。"
   },
   {
-    image: "/img/gallery-06.png",
+    image: "/img/gallery-06.png.webp",
     title: "成长机会",
     text: "在大友元气，我们信奉内部晋升。我们提供资源和指导，帮助您发展职业生涯。"
   },
   {
-    image: "/img/gallery-07.png",
+    image: "/img/gallery-07.png.webp",
     title: "社区影响力",
     text: "加入一个关心社区的团队。我们积极参与当地活动和可持续发展倡议。"
   }

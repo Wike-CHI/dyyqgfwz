@@ -38,8 +38,9 @@ export function HeroSection({
         ) : (
           <div className="w-full h-full bg-gray-900" />
         )}
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-black/30 bg-gradient-to-b from-black/50 via-transparent to-black/50" />
+        {/* Overlay Gradient - Enhanced with more depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40" />
       </div>
 
       {/* Content Layer */}

@@ -15,7 +15,14 @@
       "Bash(env:*)",
       "Bash(ssh:*)",
       "Bash(npm run build:*)",
-      "Bash(zip -r ../frontend-build.zip out/)"
+      "Bash(zip -r ../frontend-build.zip out/)",
+      "Bash(bun install:*)",
+      "Bash(npm install:*)",
+      "Bash(npx:*)",
+      "Bash(CLOUDFLARE_API_TOKEN=PLQkzMlcTABw-QmPYWZZiRbPIGUVdsVGpD7o77XS npx wrangler:*)",
+      "Bash(find:*)",
+      "Bash(sort:*)",
+      "Bash(ls:*)"
     ]
   }
 }

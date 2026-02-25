@@ -2,16 +2,16 @@ import { NavBar } from "@/components/layout/NavBar";
 import { HeroSection } from "@/components/layout/HeroSection";
 import { ContentGrid } from "@/components/layout/ContentGrid";
 import { Footer } from "@/components/layout/Footer";
-import Link from 'next/link';
+import { PrimaryButton } from "@/components/ui/PrimaryButton";
 
 const whatsNewItems = [
-  { id: '1', image: '/img/fresh-hops-craft-beer.png', title: '新品发布', meta: '本周' },
+  { id: '1', image: '/img/fresh-hops-craft-beer.png.webp', title: '新品发布', meta: '本周' },
   { id: '2', image: '/img/gallery-02.png', title: '近期活动', meta: '日历' },
   { id: '3', image: '/img/gallery-03.png', title: '酒厂生活', meta: '幕后花絮' },
-  { id: '4', image: '/img/gallery-04.png', title: '酿造工艺', meta: '探索' },
-  { id: '5', image: '/img/gallery-05.png', title: '限定特酿', meta: '新品' },
-  { id: '6', image: '/img/gallery-06.png', title: '社区', meta: '活动' },
-  { id: '7', image: '/img/gallery-07.png', title: '周边上新', meta: '商店' },
+  { id: '4', image: '/img/gallery-04.png.webp', title: '酿造工艺', meta: '探索' },
+  { id: '5', image: '/img/gallery-05.png.webp', title: '限定特酿', meta: '新品' },
+  { id: '6', image: '/img/gallery-06.png.webp', title: '社区', meta: '活动' },
+  { id: '7', image: '/img/gallery-07.png.webp', title: '周边上新', meta: '商店' },
   { id: '8', image: '/img/gallery-08.png', title: '路边自提', meta: '点单' },
 ];
 
@@ -24,17 +24,18 @@ export default function Home() {
       <HeroSection 
         backgroundImage="/img/ruian-scenery.png"
       >
-        <h1 className="font-poppins font-bold text-[48px] md:text-[62px] text-center drop-shadow-lg leading-tight tracking-tight">
+        <h1 className="font-poppins font-bold text-[48px] md:text-[62px] text-center drop-shadow-2xl leading-tight tracking-tight">
           体验<br />大友元气
         </h1>
-        {/*调转到预约界面 */}
-        <div className="mt-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-          <Link href="/order-ahead" className="px-10 py-4 bg-white text-primary-dark font-poppins font-bold text-sm tracking-widest uppercase rounded hover:bg-gray-100 transition-colors shadow-lg text-center">
+
+        {/* 调转到预约界面 */}
+        <div className="mt-12 flex flex-col md:flex-row gap-5 items-center justify-center">
+          <PrimaryButton href="/order-ahead" variant="white">
             提前点单
-          </Link>
-          <Link href="/visiting" className="px-10 py-4 border-2 border-white text-white font-poppins font-bold text-sm tracking-widest uppercase rounded hover:bg-white hover:text-primary-dark transition-colors text-center">
+          </PrimaryButton>
+          <PrimaryButton href="/visiting" variant="outline-white">
             参观我们
-          </Link>
+          </PrimaryButton>
         </div>
       </HeroSection>
 
@@ -76,7 +77,7 @@ export default function Home() {
       <section className="py-24 bg-white">
          <div className="max-w-[1400px] mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="relative aspect-[3/4] bg-gray-200 group overflow-hidden cursor-pointer">
-               <img src="/img/fresh-hops-craft-beer.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Beer" />
+               <img src="/img/fresh-hops-craft-beer.png.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Beer" />
                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
                   <h3 className="text-white font-poppins font-bold text-2xl mb-1">啤酒</h3>
                   <p className="text-gray-300 text-sm font-poppins">我们的看家本领。</p>
@@ -90,7 +91,7 @@ export default function Home() {
                </div>
             </div>
             <div className="relative aspect-[3/4] bg-gray-200 group overflow-hidden cursor-pointer">
-               <img src="/img/gallery-07.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Merch" />
+               <img src="/img/gallery-07.png.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Merch" />
                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
                   <h3 className="text-white font-poppins font-bold text-2xl mb-1">周边</h3>
                   <p className="text-gray-300 text-sm font-poppins">设计生活美学。</p>
