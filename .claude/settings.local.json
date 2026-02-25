@@ -5,7 +5,16 @@
       "Bash(npm run dev)",
       "Bash(git -C /Users/johnny/Desktop/大友元气官网 remote -v)",
       "Bash(git -C /Users/johnny/Desktop/大友元气官网 log --oneline --all --graph -20)",
-      "Bash(git remote:*)"
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout:*)",
+      "Bash(git config:*)",
+      "Bash(curl:*)",
+      "Bash(git --version)",
+      "Bash(env:*)",
+      "Bash(ssh:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }

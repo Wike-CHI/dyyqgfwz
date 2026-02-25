@@ -149,7 +149,114 @@ npm run build
 
 ## 🚀 部署信息
 
-### CloudBase 腾讯云开发部署
+### Cloudflare Pages 部署（推荐）
+
+| 项目 | 详情 |
+|------|------|
+| 部署平台 | Cloudflare Pages |
+| 域名 | www.perfectlifeexperience.com |
+| 部署类型 | 静态网站托管 + Serverless Functions |
+| Git 仓库 | https://github.com/Wike-CHI/dyyq |
+| 访问地址 | https://www.perfectlifeexperience.com |
+| 成本 | 免费（无限带宽和请求） |
+
+#### Cloudflare Pages 部署步骤
+
+**1. 注册 Cloudflare 账户**
+
+- 访问：https://dash.cloudflare.com/sign-up
+- 使用邮箱注册账户
+- 选择 FREE 计划
+
+**2. 添加域名到 Cloudflare**
+
+- 登录 Cloudflare Dashboard
+- 点击 "Add a Site"
+- 输入域名：`perfectlifeexperience.com`
+- 选择 FREE 计划
+- Cloudflare 会自动扫描现有 DNS 记录
+- 记录 Cloudflare 提供的 nameservers（格式：`xxx.ns.cloudflare.com`）
+
+**3. 在域名注册商更新 Nameservers**
+
+- 登录阿里云域名控制台
+- 找到域名 `perfectlifeexperience.com`
+- 修改 DNS 服务器为 Cloudflare 提供的 nameservers
+- 保存更改（通常需要 2-24 小时生效）
+
+**4. 创建 Cloudflare Pages 项目**
+
+- Cloudflare Dashboard → Pages → Create a project
+- 选择 "Connect to Git"
+- 授权 GitHub 并选择 `dyyq` 仓库
+- 配置构建设置：
+  ```
+  Project name: dyyq
+  Production branch: main
+  Framework preset: Next.js
+  Build command: cd frontend && npm run build
+  Build output directory: frontend/out
+  Root directory: /
+  Node.js version: 18
+  ```
+- 点击 "Save and Deploy"
+- 等待首次部署完成（3-5 分钟）
+
+**5. 配置自定义域名**
+
+- Pages → 项目 → Custom domains
+- 点击 "Set up a custom domain"
+- 输入：`www.perfectlifeexperience.com`
+- 点击 "Activate domain"
+- Cloudflare 会自动创建 DNS 记录并颁发 SSL 证书（15-30 分钟）
+
+**6. 验证部署**
+
+```bash
+# 检查 DNS 解析
+dig www.perfectlifeexperience.com
+
+# 访问网站
+curl -I https://www.perfectlifeexperience.com
+
+# 测试 API 端点
+curl https://www.perfectlifeexperience.com/api/health
+```
+
+#### 本地开发命令
+
+```bash
+# 构建前端
+cd frontend
+npm run build
+
+# 本地预览构建结果
+npm run preview
+
+# 使用 Wrangler 本地测试 Cloudflare Functions
+npm install -g wrangler
+wrangler pages dev frontend/out --watch
+```
+
+#### 自动部署
+
+配置完成后，每次推送到 GitHub `main` 分支会自动触发部署：
+
+```bash
+git add .
+git commit -m "Your commit message"
+git push origin main
+```
+
+Cloudflare Pages 会自动：
+1. 拉取最新代码
+2. 运行构建命令
+3. 部署到全球 CDN
+4. 更新自定义域名
+
+---
+
+### CloudBase 腾讯云开发部署（已废弃）
 
 | 项目 | 详情 |
 |------|------|
@@ -158,16 +265,9 @@ npm run build
 | 部署类型 | 静态网站托管 |
 | 访问地址 | https://dyyq-0gxfchpt0a88ca22-1402837521.tcloudbaseapp.com |
 | 最后部署 | 2026-02-06 |
+| 状态 | 已迁移至 Cloudflare Pages |
 
-### 部署命令
-
-```bash
-# 构建前端
-cd frontend
-npm run build
-
-# 上传 out/ 目录到 CloudBase 静态托管
-```
+> **注意：** 腾讯云开发部署已废弃，请使用 Cloudflare Pages 进行部署。
 
 ## 🤝 贡献指南
 
