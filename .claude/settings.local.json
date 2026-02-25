@@ -22,7 +22,10 @@
       "Bash(CLOUDFLARE_API_TOKEN=PLQkzMlcTABw-QmPYWZZiRbPIGUVdsVGpD7o77XS npx wrangler:*)",
       "Bash(find:*)",
       "Bash(sort:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(for:*)",
+      "Bash(do echo 'Processing $img...' cp $img $img.backup npx --yes sharp-cli -i $img.backup -o . -f webp -q 85 resize 1920 done)",
+      "Bash(/bin/mv:*)"
     ]
   }
 }

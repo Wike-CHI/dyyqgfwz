@@ -6,13 +6,13 @@ import { PrimaryButton } from "@/components/ui/PrimaryButton";
 
 const whatsNewItems = [
   { id: '1', image: '/img/fresh-hops-craft-beer.png.webp', title: '新品发布', meta: '本周' },
-  { id: '2', image: '/img/gallery-02.png', title: '近期活动', meta: '日历' },
-  { id: '3', image: '/img/gallery-03.png', title: '酒厂生活', meta: '幕后花絮' },
+  { id: '2', image: '/img/gallery-02.png.webp', title: '近期活动', meta: '日历' },
+  { id: '3', image: '/img/gallery-03.png.webp', title: '酒厂生活', meta: '幕后花絮' },
   { id: '4', image: '/img/gallery-04.png.webp', title: '酿造工艺', meta: '探索' },
   { id: '5', image: '/img/gallery-05.png.webp', title: '限定特酿', meta: '新品' },
   { id: '6', image: '/img/gallery-06.png.webp', title: '社区', meta: '活动' },
   { id: '7', image: '/img/gallery-07.png.webp', title: '周边上新', meta: '商店' },
-  { id: '8', image: '/img/gallery-08.png', title: '路边自提', meta: '点单' },
+  { id: '8', image: '/img/gallery-08.png.webp', title: '路边自提', meta: '点单' },
 ];
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <HeroSection 
-        backgroundImage="/img/ruian-scenery.png"
+        backgroundImage="/img/ruian-scenery.png.webp"
       >
         <h1 className="font-poppins font-bold text-[48px] md:text-[62px] text-center drop-shadow-2xl leading-tight tracking-tight">
           体验<br />大友元气
@@ -84,7 +84,7 @@ export default function Home() {
                </div>
             </div>
             <div className="relative aspect-[3/4] bg-gray-200 group overflow-hidden cursor-pointer">
-               <img src="/img/gallery-02.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Events" />
+               <img src="/img/gallery-02.png.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Events" />
                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
                   <h3 className="text-white font-poppins font-bold text-2xl mb-1">活动</h3>
                   <p className="text-gray-300 text-sm font-poppins">精彩不容错过。</p>

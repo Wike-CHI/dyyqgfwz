@@ -2,12 +2,12 @@ import { ZigZagSection } from "@/components/layout/ZigZagSection";
 
 const rows = [
   {
-    image: "/img/gallery-02.png",
-    title: "访问铂金瑞湾",
+    image: "/img/gallery-02.png.webp",
+    title: "访问铂瑞湾",
     text: "我们的铂瑞湾店是大友元气酿造公司的核心。坐落城市中，它提供了一个宁静的环境来享受我们种类繁多的啤酒。我们欢迎您探索这片场地，找到属于您的完美角落。"
   },
   {
-    image: "/img/gallery-03.png",
+    image: "/img/gallery-03.png.webp",
     title: "期待什么",
     text: "抵达后，我们友好的工作人员将迎接您，并引导您完成点单流程。无论您是来快速取货还是悠闲地享用生啤，我们要让您的访问难忘。"
   },
