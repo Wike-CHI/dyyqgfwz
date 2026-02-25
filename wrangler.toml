@@ -1,0 +1,13 @@
+# Cloudflare Pages configuration for monorepo
+name = "dayou-yuanqi-website"
+compatibility_date = "2024-01-01"
+
+[pages]
+# Build output directory relative to repository root
+build_output_directory = "frontend/out"
+
+# Build command to run
+build_command = "cd frontend && npm install && npm run build"
+
+# Directory to change to before running build (optional, for monorepos)
+# cwd = "frontend"
