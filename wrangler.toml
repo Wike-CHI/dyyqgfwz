@@ -2,12 +2,9 @@
 name = "dyyq"
 compatibility_date = "2026-02-25"
 
-[pages]
+[assets]
 # Build output directory relative to repository root
-build_output_directory = "frontend/out"
+directory = "frontend/out"
 
-# Build command to run
-build_command = "cd frontend && npm install && npm run build"
-
-# Directory to change to before running build (optional, for monorepos)
-# cwd = "frontend"
+# Build command to run (optional - handled by build system)
+# build_command = "cd frontend && npm install && npm run build"
