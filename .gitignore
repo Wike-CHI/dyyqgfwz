@@ -9,7 +9,7 @@ coverage/
 # Next.js
 .next/
 out/
-
+*.zip
 # Production
 build/
 dist/

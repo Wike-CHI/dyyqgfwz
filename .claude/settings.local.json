@@ -14,7 +14,8 @@
       "Bash(git --version)",
       "Bash(env:*)",
       "Bash(ssh:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(zip -r ../frontend-build.zip out/)"
     ]
   }
 }

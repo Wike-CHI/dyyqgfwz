@@ -1,5 +1,5 @@
 # Cloudflare Pages configuration for monorepo
-name = "dayou-yuanqi-website"
+name = "perfectlifeexperience"
 compatibility_date = "2024-01-01"
 
 [pages]
