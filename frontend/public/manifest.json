@@ -1,0 +1,26 @@
+{
+  "name": "大友元气 - 精酿啤酒",
+  "short_name": "大友元气",
+  "description": "大友元气是一家位于瑞安铂瑞湾的精酿啤酒厂，致力于酿造世界级品质的精酿啤酒。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#34394D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "beverages"],
+  "lang": "zh"
+}

@@ -1,4 +1,14 @@
 import { MultiColumnText } from "@/components/layout/MultiColumnText";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "加入我们",
+  description: "加入大友元气团队，共同酿造世界级精酿啤酒。我们提供全面的医疗保障、成长机会和良好的工作环境。",
+  openGraph: {
+    title: "加入我们 | 大友元气",
+    description: "探索大友元气的职业机会，加入我们的精酿啤酒团队。",
+  },
+};
 
 const benefits = [
   {
