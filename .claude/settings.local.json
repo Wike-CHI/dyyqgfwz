@@ -25,7 +25,13 @@
       "Bash(ls:*)",
       "Bash(for:*)",
       "Bash(do echo 'Processing $img...' cp $img $img.backup npx --yes sharp-cli -i $img.backup -o . -f webp -q 85 resize 1920 done)",
-      "Bash(/bin/mv:*)"
+      "Bash(/bin/mv:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__web-search-prime__webSearchPrime",
+      "mcp__web-reader__webReader",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
