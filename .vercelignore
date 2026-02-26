@@ -1,7 +1,39 @@
+# Dependencies
 node_modules
-build
-dist
+frontend/node_modules
+backend/node_modules
+
+# Build outputs
+frontend/.next
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
 .git
-.trae
-.log
-.figma
+.gitignore
+
+# Documentation
+README.md
+docs
+openspec
+
+# Backup files
+frontend/img-backup
+*.backup
+
+# CI/CD
+.gitlab-ci.yml
+wrangler.toml
