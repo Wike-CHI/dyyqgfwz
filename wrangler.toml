@@ -2,3 +2,7 @@
 name = "dyyq"
 compatibility_date = "2026-02-25"
 pages_build_output_dir = "frontend/out"
+
+# SPA 路由支持
+[assets]
+not_found_handling = "single-page-application"
