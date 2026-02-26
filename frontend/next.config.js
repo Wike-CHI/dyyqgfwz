@@ -6,6 +6,10 @@ const nextConfig = {
     experimental: {
       turbopackUseSystemTlsCerts: true,
     },
+    // 压缩输出
+    compress: true,
+    // 生产环境 source maps（调试用，生产可关闭）
+    productionBrowserSourceMaps: false,
     images: {
       // 静态导出时不支持 Next.js 的默认图片优化，需要开启此选项
       unoptimized: true,

@@ -3,6 +3,17 @@ import { HeroSection } from "@/components/layout/HeroSection";
 import { ContentGrid } from "@/components/layout/ContentGrid";
 import { Footer } from "@/components/layout/Footer";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "首页",
+  description: "欢迎来到大友元气。我们致力于酿造世界级品质的精酿啤酒。探索我们的啤酒系列，参观我们的酒厂，或在线订购。",
+  openGraph: {
+    title: "大友元气 - 精酿啤酒 | 铂瑞湾",
+    description: "欢迎来到大友元气。我们致力于酿造世界级品质的精酿啤酒。",
+    images: ["/img/ruian-scenery.png.webp"],
+  },
+};
 
 const whatsNewItems = [
   { id: '1', image: '/img/fresh-hops-craft-beer.png.webp', title: '新品发布', meta: '本周' },
@@ -16,8 +27,36 @@ const whatsNewItems = [
 ];
 
 export default function Home() {
+  // 结构化数据（JSON-LD）
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Brewery',
+    name: '大友元气',
+    description: '大友元气是一家位于瑞安铂瑞湾的精酿啤酒厂，致力于酿造世界级品质的精酿啤酒。',
+    url: 'https://perfectlifeexperience.com',
+    logo: 'https://perfectlifeexperience.com/logo/logo.png',
+    image: 'https://perfectlifeexperience.com/img/ruian-scenery.png.webp',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: '瑞安',
+      addressRegion: '浙江',
+      addressCountry: 'CN'
+    },
+    sameAs: [
+      // 添加社交媒体链接
+      // 'https://twitter.com/dayouyuanqi',
+      // 'https://www.instagram.com/dayouyuanqi',
+    ],
+    servesCuisine: '精酿啤酒',
+    priceRange: '$$'
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <NavBar transparent={true} />
       
       {/* Hero Section */}

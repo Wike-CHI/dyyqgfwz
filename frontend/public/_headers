@@ -1,0 +1,22 @@
+# Cloudflare Pages 缓存优化配置
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# 静态资源缓存（图片、字体等）
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML 文件不缓存
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

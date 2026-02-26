@@ -1,4 +1,14 @@
 import { ZigZagSection } from "@/components/layout/ZigZagSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "参观我们",
+  description: "参观大友元气精酿啤酒厂。探索我们的酿造工艺，品尝最新鲜的精酿啤酒。我们的铂瑞湾店提供舒适的品酒环境和友好的服务。",
+  openGraph: {
+    title: "参观我们 | 大友元气",
+    description: "参观大友元气精酿啤酒厂，探索酿造工艺，品尝精酿啤酒。",
+  },
+};
 
 const rows = [
   {
